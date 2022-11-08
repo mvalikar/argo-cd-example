@@ -10,6 +10,10 @@ spec:
     namespace: argocd
     server: https://kubernetes.default.svc
   project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
   source:
     path: argocd/my-apps/app-1
     repoURL: https://gitlab.com/ayush-sharma/example-assets.git
