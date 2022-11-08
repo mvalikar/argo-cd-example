@@ -9,11 +9,7 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: default
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+  project: default  
   source:
     path: argocd/my-apps/app-3
     repoURL: https://github.com/mvalikar/argo-cd-example.git
